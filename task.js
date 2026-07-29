@@ -1,67 +1,198 @@
-function isEven(number) {
-  return number / 2 === 0;
-}
-for (let i = 1; i <= 20; i++) {
-  if (isEven(i)) {
-    console.log(i);
-  }
-}
-//step 2
-function getGrade(marks) {
-  if (marks >= 90) {
-    return "A";
-  } else if (marks >= 80) {
-    return "B";
-  } else if (marks >= 70) {
-    return "C";
-  } else if (marks >= 60) {
-    return "D";
-  } else {
-    return "F";
-  }
-}
-console.log(getGrade(59));
+// function isEven(number) {
+//   return number / 2 === 0;
+// }
+// for (let i = 1; i <= 20; i++) {
+//   if (isEven(i)) {
+//     console.log(i);
+//   }
+// }
+// //step 2
+// function getGrade(marks) {
+//   if (marks >= 90) {
+//     return "A";
+//   } else if (marks >= 80) {
+//     return "B";
+//   } else if (marks >= 70) {
+//     return "C";
+//   } else if (marks >= 60) {
+//     return "D";
+//   } else {
+//     return "F";
+//   }
+// }
+// console.log(getGrade(59));
 
-//step 3
+// //step 3
+
+// const students = [
+//   { name: "Ali", marks: 85 },
+//   { name: "Ahmed", marks: 92 },
+//   { name: "Sara", marks: 76 },
+//   { name: "Ayesha", marks: 64 },
+//   { name: "Zain", marks: 55 },
+// ];
+// function getGrade(marks) {
+//   if (marks >= 90) {
+//     return "A";
+//   } else if (marks >= 80) {
+//     return "B";
+//   } else if (marks >= 70) {
+//     return "C";
+//   } else if (marks >= 60) {
+//     return "D";
+//   } else {
+//     return "F";
+//   }
+// }
+// console.log(getGrade(59));
+// for (const student of students) {
+//   console.log(`${student.name} got a grade of ${getGrade(student.marks)}`);
+// }
+
+// //step 4
+
+// function getRandomStudent(studentsData) {
+//   let random = Math.round(Math.random() * students.length);
+//   return studentsData[random];
+// }
+// const studentsData = [
+//   { name: "Ali", marks: 85 },
+//   { name: "Ahmed", marks: 92 },
+//   { name: "Sara", marks: 76 },
+//   { name: "Ayesha", marks: 64 },
+//   { name: "Zain", marks: 55 },
+// ];
+// let randomStudent = getRandomStudent(students);
+// console.log(randomStudent);
+// console.log(`${randomStudent.name} number ${randomStudent.marks}`);
+
+//create a function which convert pkr into usd..
+
+// function pkrToUsd(pkr, usd) {
+//   return pkr / usd;
+// }
+// const pkr = "90000";
+// const usd = "280";
+// console.log(`${pkr} pkr is equal to ${pkrToUsd(pkr, usd)} usd`);
+
+// arrow method
+
+// const pkrToUsd = (pkr, usd) => {
+//   return pkr / usd;
+// };
+// console.log(`${pkr} pkr is equal to ${pkrToUsd(pkr, usd)} usd`);
+
+// expiration method
+
+// const pkrToUsd = function (pkr, usd) {
+//   return pkr / usd;
+// };
+// console.log(`${pkr} pkr is equal to ${pkrToUsd(pkr, usd)} usd`);
+//
+
+// function currencyConverter(amount, rate) {
+//   return amount * rate;
+// }
+// console.log(currencyConverter(1500, 280));
+// console.log(currencyConverter(350, 0.028));
+
+//home task:
+
+// function convertTemperature(celsius) {
+//   return (celsius * 9) / 5 + 32;
+// }
+
+// console.log(convertTemperature(25), "F");
+
+const studentsMarks = [
+  {
+    id: 1,
+    name: "Ali",
+    class: 11,
+    rollNo: 1,
+    marks: 55,
+  },
+  {
+    id: 2,
+    name: "Ahmad",
+    class: 11,
+    rollNo: 2,
+    marks: 60,
+  },
+  {
+    id: 3,
+    name: "Hamza",
+    class: 11,
+    rollNo: 3,
+    marks: 53,
+  },
+  {
+    id: 4,
+    name: "Nomi",
+    class: 11,
+    rollNo: 4,
+    marks: 51,
+  },
+];
+// studentsMarks.forEach((value, index) => {
+//   console.log(`Name at index ${index} is ${value.name.toUpperCase()}`);
+// });
+// studentsMarks.forEach((value, index) => {
+//   console.log(`Roll no at INDEX ${index} is ${value.rollNo}`);
+// });
+// const studentData = (value, index, arr) => {
+//   console.log(`id at INDEX ${index} is ${value.id}`);
+// };
+// studentsMarks.forEach(studentData);
+
+// const helo = studentsMarks.map((value) => {
+//   if (value.marks >= 55) {
+//     value.grade = "A";
+//   } else {
+//     value.grade = "F";
+//   }
+//   return value;
+// });
+// console.log(helo);
+
+// function getMarks(students) {
+//   if (marks >= 90) {
+//     return (Grade = A);
+//   } else if (marks >= 80) {
+//     return (Grade = B);
+//   } else if (marks >= 70) {
+//     return (Grade = C);
+//   } else if (marks >= 60) {
+//     return (Grade = D);
+//   } else {
+//     return (Grade = F);
+//   }
+// }
 
 const students = [
-  { name: "Ali", marks: 85 },
-  { name: "Ahmed", marks: 92 },
-  { name: "Sara", marks: 76 },
-  { name: "Ayesha", marks: 64 },
-  { name: "Zain", marks: 55 },
+  { name: "Ali", marks: 85, attendance: 92 },
+  { name: "Sara", marks: 35, attendance: 78 },
+  { name: "Zain", marks: 92, attendance: 65 },
+  { name: "Hina", marks: 40, attendance: 88 },
+  { name: "Bilal", marks: 55, attendance: 45 },
 ];
-function getGrade(marks) {
-  if (marks >= 90) {
-    return "A";
-  } else if (marks >= 80) {
-    return "B";
-  } else if (marks >= 70) {
-    return "C";
-  } else if (marks >= 60) {
-    return "D";
-  } else {
-    return "F";
-  }
-}
-console.log(getGrade(59));
-for (const student of students) {
-  console.log(`${student.name} got a grade of ${getGrade(student.marks)}`);
-}
-
-//step 4
-
-function getRandomStudent(studentsData) {
-  let random = Math.round(Math.random() * students.length);
-  return studentsData[random];
-}
-const studentsData = [
-  { name: "Ali", marks: 85 },
-  { name: "Ahmed", marks: 92 },
-  { name: "Sara", marks: 76 },
-  { name: "Ayesha", marks: 64 },
-  { name: "Zain", marks: 55 },
-];
-let randomStudent = getRandomStudent(students);
-console.log(randomStudent);
-console.log(`${randomStudent.name} number ${randomStudent.marks}`);
+let result = students.filter((students) => {
+  return students.marks > 80;
+});
+console.log(result);
+let result1 = students.find((students) => {
+  return students.name === "Ali";
+});
+console.log(result1);
+let result2 = students.findIndex((students) => {
+  return students.marks <= 38;
+});
+console.log(result2);
+let result3 = students.some((students) => {
+  return students.attendance >= 80;
+});
+console.log(result3);
+let result4 = students.every((students) => {
+  return students.attendance >= 50;
+});
+console.log(result4);
