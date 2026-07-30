@@ -338,9 +338,12 @@ const studentsData = [
   },
 ];
 
-// desturcturing..
-const [, , , forthObj, , , , , ninthObj] = studentsData;
-console.log(forthObj, ninthObj);
+// desturcturing,,,
+//
+//
+//
+// const [, , , forthObj, , , , , ninthObj] = studentsData;
+// console.log(forthObj, ninthObj);
 
 // const [, secondObj, , , , , , , , tenthObj] = studentsData;
 // console.log(secondObj, tenthObj);
@@ -351,3 +354,32 @@ console.log(forthObj, ninthObj);
 // const [firstObj] = studentsData;
 // console.log(firstObj);
 
+// rest operators...
+//
+//
+//
+// const [, , , , ...newStudents] = studentsData;
+// console.log(newStudents);
+
+// const [, , , , , , , ...weekStudent] = studentsData;
+// console.log(weekStudent);
+
+// const { id: _, ...ignore } = studentsData[4];
+// console.log(ignore);
+
+// const { id: _, age, grade, ...cut } = studentsData[4];
+// console.log(cut);
+
+// const exit = studentsData.slice(5, 9);
+// console.log(exit);
+
+// const exit = studentsData.slice(5, 6);
+// console.log(exit);
+
+// const evenIndexStudents = studentsData.filter(
+//   (student, index) => index % 2 === 0,
+// );
+// console.log(evenIndexStudents);
+
+// const evenIdStudents = studentsData.filter((value) => value.id % 2 === 0);
+// console.log(evenIndexStudents);
