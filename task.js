@@ -191,51 +191,163 @@
 //   return value >= 40;
 // });
 // console.log(final);
-const students = [
-  { name: "Ali", marks: 85, attendance: 92 },
-  { name: "Sara", marks: 35, attendance: 78 },
-  { name: "Zain", marks: 92, attendance: 65 },
-  { name: "Hina", marks: 40, attendance: 88 },
-  { name: "Bilal", marks: 55, attendance: 45 },
+
+// // step  1
+// const getMarks = students.map((value) => {
+//   if (value.marks >= 90) {
+//     value.grade = "A";
+//   } else if (value.marks >= 80) {
+//     value.grade = "B";
+//   } else if (value.marks >= 70) {
+//     value.grade = "C";
+//   } else if (value.marks >= 60) {
+//     value.grade = "D";
+//   } else {
+//     value.grade = "F";
+//   }
+//   return students;
+// });
+
+// //step  2
+// console.log(students);
+// const result = students.filter((value) => {
+//   return value.marks >= 40;
+// });
+// console.log(result);
+// students.forEach((value) => {
+//   console.log(`Name: ${value.name}    Grade: ${value.grade}`);
+// });
+
+// //step  3
+// const attendance = students.some((value) => {
+//   return value.attendance < 50;
+// });
+// console.log(
+//   `${attendance}  :You will not able to seat in exam.So make sure that you attendance is above 50%`,
+// );
+// const appointment = students.some((value) => {
+//   return value.marks >= 40;
+// });
+// console.log(
+//   `${appointment}  : ⚠️ Not all students passed. Some students need improvement.`,
+// );
+
+// const students = [
+//   { name: "Ali", marks: 85, attendance: 92 },
+//   { name: "Sara", marks: 35, attendance: 78 },
+//   { name: "Zain", marks: 92, attendance: 65, rollNo: 9 },
+//   { name: "Hina", marks: 40, attendance: 88 },
+//   { name: "Bilal", marks: 55, attendance: 45 },
+// ];
+
+// const { name, marks: studentMark, rollNo = "N/A" } = students[2];
+// console.log(name, studentMark, rollNo);
+
+// array of 10 object
+
+const studentsData = [
+  {
+    id: 1,
+    name: "Ali Khan",
+    age: 20,
+    gender: "Male",
+    grade: "A",
+    course: "Computer Science",
+    email: "ali.khan@example.com",
+  },
+  {
+    id: 2,
+    name: "Ayesha Malik",
+    age: 21,
+    gender: "Female",
+    grade: "B+",
+    course: "Software Engineering",
+    email: "ayesha.malik@example.com",
+  },
+  {
+    id: 3,
+    name: "Usman Ahmed",
+    age: 22,
+    gender: "Male",
+    grade: "A-",
+    course: "Information Technology",
+    email: "usman.ahmed@example.com",
+  },
+  {
+    id: 4,
+    name: "Noor Fatima",
+    age: 19,
+    gender: "Female",
+    grade: "A+",
+    course: "Data Science",
+    email: "noor.fatima@example.com",
+  },
+  {
+    id: 5,
+    name: "Hassan Raza",
+    age: 23,
+    gender: "Male",
+    grade: "B",
+    course: "Cyber Security",
+    email: "hassan.raza@example.com",
+  },
+  {
+    id: 6,
+    name: "Sara Iqbal",
+    age: 20,
+    gender: "Female",
+    grade: "A",
+    course: "Artificial Intelligence",
+    email: "sara.iqbal@example.com",
+  },
+  {
+    id: 7,
+    name: "Bilal Shah",
+    age: 22,
+    gender: "Male",
+    grade: "C+",
+    course: "Computer Engineering",
+    email: "bilal.shah@example.com",
+  },
+  {
+    id: 8,
+    name: "Kaneez-e-Zainab",
+    age: 21,
+    gender: "Female",
+    grade: "B-",
+    course: "Business Information Systems",
+    email: "zainab.46@example.com",
+  },
+  {
+    id: 9,
+    name: "Omar Farooq",
+    age: 24,
+    gender: "Male",
+    grade: "A",
+    course: "Networking",
+    email: "omar.farooq@example.com",
+  },
+  {
+    id: 10,
+    name: "Maryam Asif",
+    age: 20,
+    gender: "Female",
+    grade: "A-",
+    course: "Computer Science",
+    email: "maryam.asif@example.com",
+  },
 ];
 
-// step  1
-const getMarks = students.map((value) => {
-  if (value.marks >= 90) {
-    value.grade = "A";
-  } else if (value.marks >= 80) {
-    value.grade = "B";
-  } else if (value.marks >= 70) {
-    value.grade = "C";
-  } else if (value.marks >= 60) {
-    value.grade = "D";
-  } else {
-    value.grade = "F";
-  }
-  return students;
-});
+// desturcturing..
+const [, , , forthObj, , , , , ninthObj] = studentsData;
+console.log(forthObj, ninthObj);
 
-//step  2
-console.log(students);
-const result = students.filter((value) => {
-  return value.marks >= 40;
-});
-console.log(result);
-students.forEach((value) => {
-  console.log(`Name: ${value.name}    Grade: ${value.grade}`);
-});
+// const [, secondObj, , , , , , , , tenthObj] = studentsData;
+// console.log(secondObj, tenthObj);
 
-//step  3
-const attendance = students.some((value) => {
-  return value.attendance < 50;
-});
-console.log(
-  `${attendance}  :You will not able to seat in exam.So make sure that you attendance is above 50%`,
-);
-const appointment = students.some((value) => {
-  return value.marks >= 40;
-});
-console.log(
-  `${appointment}  : ⚠️ Not all students passed. Some students need improvement.`,
-);
+// const [, , , , , , , , , tenthObj] = studentsData;
+// console.log(tenthObj);
+
+// const [firstObj] = studentsData;
+// console.log(firstObj);
 
