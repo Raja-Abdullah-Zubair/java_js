@@ -104,36 +104,36 @@
 
 // console.log(convertTemperature(25), "F");
 
-const studentsMarks = [
-  {
-    id: 1,
-    name: "Ali",
-    class: 11,
-    rollNo: 1,
-    marks: 55,
-  },
-  {
-    id: 2,
-    name: "Ahmad",
-    class: 11,
-    rollNo: 2,
-    marks: 60,
-  },
-  {
-    id: 3,
-    name: "Hamza",
-    class: 11,
-    rollNo: 3,
-    marks: 53,
-  },
-  {
-    id: 4,
-    name: "Nomi",
-    class: 11,
-    rollNo: 4,
-    marks: 51,
-  },
-];
+// const studentsMarks = [
+//   {
+//     id: 1,
+//     name: "Ali",
+//     class: 11,
+//     rollNo: 1,
+//     marks: 55,
+//   },
+//   {
+//     id: 2,
+//     name: "Ahmad",
+//     class: 11,
+//     rollNo: 2,
+//     marks: 60,
+//   },
+//   {
+//     id: 3,
+//     name: "Hamza",
+//     class: 11,
+//     rollNo: 3,
+//     marks: 53,
+//   },
+//   {
+//     id: 4,
+//     name: "Nomi",
+//     class: 11,
+//     rollNo: 4,
+//     marks: 51,
+//   },
+// ];
 // studentsMarks.forEach((value, index) => {
 //   console.log(`Name at index ${index} is ${value.name.toUpperCase()}`);
 // });
@@ -155,20 +155,42 @@ const studentsMarks = [
 // });
 // console.log(helo);
 
-// function getMarks(students) {
-//   if (marks >= 90) {
-//     return (Grade = A);
-//   } else if (marks >= 80) {
-//     return (Grade = B);
-//   } else if (marks >= 70) {
-//     return (Grade = C);
-//   } else if (marks >= 60) {
-//     return (Grade = D);
-//   } else {
-//     return (Grade = F);
-//   }
-// }
+// const students = [
+//   { name: "Ali", marks: 85, attendance: 92 },
+//   { name: "Sara", marks: 35, attendance: 78 },
+//   { name: "Zain", marks: 92, attendance: 65 },
+//   { name: "Hina", marks: 40, attendance: 88 },
+//   { name: "Bilal", marks: 55, attendance: 45 },
+// ];
+// let result = students.filter((student) => {
+//   return students.marks > 80;
+// });
+// console.log(result);
+// let result1 = students.find((student) => {
+//   return students.name === "Ali";
+// });
+// console.log(result1);
+// let result2 = students.findIndex((student) => {
+//   return students.marks <= 38;
+// });
+// console.log(result2);
+// let result3 = students.some((student) => {
+//   return students.attendance >= 80;
+// });
+// console.log(result3);
+// let result4 = students.every((student) => {
+//   return students.attendance >= 50;
+// });
+// console.log(result4);
 
+// const finalResult = students.map((student) => {
+//   return student.marks;
+// });
+// console.log(finalResult);
+// const final = finalResult.filter((value) => {
+//   return value >= 40;
+// });
+// console.log(final);
 const students = [
   { name: "Ali", marks: 85, attendance: 92 },
   { name: "Sara", marks: 35, attendance: 78 },
@@ -176,23 +198,44 @@ const students = [
   { name: "Hina", marks: 40, attendance: 88 },
   { name: "Bilal", marks: 55, attendance: 45 },
 ];
-let result = students.filter((students) => {
-  return students.marks > 80;
+
+// step  1
+const getMarks = students.map((value) => {
+  if (value.marks >= 90) {
+    value.grade = "A";
+  } else if (value.marks >= 80) {
+    value.grade = "B";
+  } else if (value.marks >= 70) {
+    value.grade = "C";
+  } else if (value.marks >= 60) {
+    value.grade = "D";
+  } else {
+    value.grade = "F";
+  }
+  return students;
+});
+
+//step  2
+console.log(students);
+const result = students.filter((value) => {
+  return value.marks >= 40;
 });
 console.log(result);
-let result1 = students.find((students) => {
-  return students.name === "Ali";
+students.forEach((value) => {
+  console.log(`Name: ${value.name}    Grade: ${value.grade}`);
 });
-console.log(result1);
-let result2 = students.findIndex((students) => {
-  return students.marks <= 38;
+
+//step  3
+const attendance = students.some((value) => {
+  return value.attendance < 50;
 });
-console.log(result2);
-let result3 = students.some((students) => {
-  return students.attendance >= 80;
+console.log(
+  `${attendance}  :You will not able to seat in exam.So make sure that you attendance is above 50%`,
+);
+const appointment = students.some((value) => {
+  return value.marks >= 40;
 });
-console.log(result3);
-let result4 = students.every((students) => {
-  return students.attendance >= 50;
-});
-console.log(result4);
+console.log(
+  `${appointment}  : ⚠️ Not all students passed. Some students need improvement.`,
+);
+
