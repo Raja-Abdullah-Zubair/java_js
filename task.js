@@ -244,7 +244,7 @@
 // console.log(name, studentMark, rollNo);
 
 // array of 10 object
-
+// /* const obj1 = { city: "Wah Cant ", fatherName: "Hamza" };*/    For spread operator only
 const studentsData = [
   {
     id: 1,
@@ -337,6 +337,7 @@ const studentsData = [
     email: "maryam.asif@example.com",
   },
 ];
+// console.log(studentsData);   for uper spred operator
 
 // desturcturing,,,
 //
@@ -354,6 +355,9 @@ const studentsData = [
 // const [firstObj] = studentsData;
 // console.log(firstObj);
 
+//
+//
+//
 // rest operators...
 //
 //
@@ -383,3 +387,11 @@ const studentsData = [
 
 // const evenIdStudents = studentsData.filter((value) => value.id % 2 === 0);
 // console.log(evenIndexStudents);
+
+//
+//
+// spread operator
+//
+//
+// const studentData = [5, ...studentsData, 5];
+// console.log(studentData);
